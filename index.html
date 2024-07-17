@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List : Harshit Kumar Sahu</title>
+    <link rel="icon" href="./images/icon.png">
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="blur-container">
+            <div class="todo-container">
+                <div class="heading">
+                    <div class="head-time">
+                        <h1>To-Do List <img src="./images/icon.png" alt=""></h1>
+                        <h2 id="timeAmPm">10:00 am</h2>
+                    </div>
+                    <div class="date-task">
+                        <h2 id="dayDateMonth">Tuesday , 31 <br> August</h2>
+                        <h2 id="task-count">0 Tasks</h2>
+                    </div>
+                </div>
+                <div class="take-input">
+                    <input type="text" id="input-box" placeholder="Add Your Task">
+                    <button id="add-btn">ADD</button>
+                </div>
+                <ul id="list-container">
+                </ul>
+                <div class="delete-btn">
+                    <button id="delete"> DELETE ALL <i class="ri-delete-bin-line"></i> </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
