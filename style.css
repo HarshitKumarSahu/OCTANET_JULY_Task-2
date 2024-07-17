@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #111 , #222 , #333 , #444 , #555);
+    background-size: 300% 300%;
+    animation-name: color;
+    animation-duration: 12s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes color {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+.container .blur-container {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    backdrop-filter: blur(1.473vh);
+    -webkit-backdrop-filter: blur(1.473vh);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .blur-container .todo-container {
+    width: 100%;
+    max-width: 55.965vh;
+    height: 81.001vh;
+    background-color: #f8f8f8;
+    padding: 2.946vh;
+    border-radius: 1.767vh;
+}
+.container .blur-container .todo-container .heading .head-time {
+    display: flex;
+    align-items: first baseline;
+    justify-content: space-between;
+}
+.container .blur-container .todo-container .heading .head-time h1 {
+    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2.946vh;
+    font-size: 3.682vh;
+    margin-bottom: 2.209vh;
+    font-weight: 600;
+}
+.container .blur-container .todo-container .heading .head-time h1 img {
+    width: 4.418vh;
+}
+.container .blur-container .todo-container .heading .head-time h2 {
+    font-size: 2.651vh;
+    font-weight: 400;
+}
+.container .blur-container .todo-container .heading .date-task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.209vh;
+}
+.container .blur-container .todo-container .heading .date-task h2 {
+    font-size: 2.651vh;
+    font-weight: 400;
+}
+.container .blur-container .todo-container .take-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 4.418vh;
+    padding-left: 2.209vh;
+    margin-bottom: 1.473vh;
+}
+.container .blur-container .todo-container .take-input #input-box {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 1.473vh;
+    font-weight: 300;
+    font-size: 2.209vh;
+}
+.container .blur-container .todo-container .take-input #add-btn {
+    border: none;
+    outline: none;
+    padding: 2.356vh 4.418vh;
+    background: #ff5945;
+    color: #f8f8f8;
+    font-size: 2.209vh;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4.418vh;
+}
+.container .blur-container .todo-container #list-container {
+    margin: 2.209vh 0;
+    padding: 1.473vh;
+    height: 35.346vh;
+    overflow: scroll;
+    border-radius: 1.767vh;
+    background-color: #edeef0; 
+}
+.container .blur-container .todo-container #list-container li {
+    list-style: none;
+    font-size: 2.356vh;
+    padding: 1.178vh 5.891vh;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+.container .blur-container .todo-container #list-container li::before {
+    content: "";
+    position: absolute;
+    height: 2.946vh;
+    width: 2.946vh;
+    border-radius: 50%;
+    background-image: url(./images/unchecked.png);
+    background-size: contain;
+    background-position: center;
+    top: 1.178vh;
+    left: 1.178vh;
+}
+.container .blur-container .todo-container #list-container .checked {
+    color: #999;
+    text-decoration: line-through; 
+}
+.container .blur-container .todo-container #list-container .checked::before {
+    background-image: url(./images/checked.png); 
+}
+.container .blur-container .todo-container #list-container li span {
+    position: absolute;
+    right: 0;
+    top : 0;
+    width: 5.155vh;
+    height: 5.155vh;
+    font-size: 2.946vh;
+    color: #555;
+    line-height: 5.155vh;
+    text-align: center;
+}
+.container .blur-container .todo-container #list-container li span:hover {
+    background: #fff;
+    border-radius: 50%;
+}
+.container .blur-container .todo-container .delete-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .blur-container .todo-container .delete-btn button {
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 2.356vh;
+    font-weight: 500;
+    padding: 2.209vh /*14.728vh*/;
+    border-radius: 4.418vh;
+    background: #ff5945;
+    color: #f8f8f8;
+    letter-spacing: 0.147vh;
+}
+.container .blur-container .todo-container .delete-btn button i {
+    font-size: 2.356vh;
+    font-weight: 900;
+    padding-left: 2.125vh;
+}
+
+@media (max-width : 450px) {
+    .container .blur-container .todo-container {
+        width: 100%;
+        max-width: 100%;
+        height: 100vh;
+        padding: 2.946vh;
+        border-radius: 0;
+    }
+    .container .blur-container .todo-container .take-input #add-btn {
+        position: relative;
+        right: 32.5vw; /* 123px */
+    }
+    .container .blur-container .todo-container #list-container {
+        height: 45.346vh;
+    }
+}
